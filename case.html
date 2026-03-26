@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forside</title>
+    <link rel="stylesheet" href="casestyle.css">
+</head>
+<body>
+    <!-- offc menu -->
+    <div class="header">
+        <div id="menuBtn">Menu</div>
+        <a href="case.html" id="logo">shopname</a>
+        <div id="basket">Kurv: <p id="count">0</p></div>
+            <div class="overlay"></div>
+        <nav class="offcanvas" id="offcanvasMenu">
+            <button id="closeBtn">Luk</button>
+                <ul>
+                    <li><a href="case.html">Forside</a></li>
+                    <li><a href="#">underside a</a></li>
+                    <li><a href="casekontakt.html">Kontakt</a></li>
+                </ul>
+        </nav>
+    </div>
+
+    <div class="basketoverlay-content">
+            <p class="btext">Total:</p>
+            <p class="btext" id="total">0</p>
+    </div>
+    <!-- slides-->
+    <div class="replacesbody">
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="jscaseimg/vinicius-amnx-amano-dbOV1qSiL-c-unsplash.jpg" alt="Bland selv">
+                <div class="caption">Bland selv</div>
+            </div>
+            <div class="slide">
+                <img src="jscaseimg/denny-muller-mGP8gyGb8zY-unsplash.jpg" alt="Boks med chokoladebarer">
+                <div class="caption">Vælg selv blandt vores barer</div>
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+    </div>
+    
+    <!-- grid -->
+    <div id="grid">
+            <!-- <button id="get1">get</button> -->
+            <!-- <button id="remove1" class="hidden">remove</button> -->
+        
+        </div>
+    </div>
+
+
+    <!-- dynamisk åbent/lukket -->
+    <div class="hours">
+        <div id="openStatus">placeholder</div>
+    </div>
+
+    <script src="casescript.js"></script>
+</body>
+</html>

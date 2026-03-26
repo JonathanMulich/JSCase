@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header{
+  background-color: #222;
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* overlay + offcanvas */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+#menuBtn,
+#closeBtn, #basket, #logo {
+  padding: 10px 20px;
+  margin: 0px;
+  cursor: pointer;
+  color: white;
+  background-color: #222;
+}
+
+.offcanvas {
+position: fixed;
+/* over overlay, som  er over slides */
+z-index: 999;
+top: 0;
+left: 0;
+width: 250px;
+height: 100vh;
+background: #222;
+color: white;
+padding: 20px;
+box-sizing: border-box;
+
+transform: translateX(-100%);
+transition: transform 0.3s ease;
+}
+
+.offcanvas.open {
+transform: translateX(0);
+}
+
+.offcanvas ul {
+list-style: none;
+padding: 0;
+margin-top: 20px;
+}
+
+.offcanvas li {
+margin-bottom: 16px;
+}
+
+.offcanvas a {
+color: white;
+text-decoration: none;
+}
+.overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      /* over slides */
+      z-index: 99;
+      display: none;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* når overlayet er aktivt */
+    .overlay.show {
+      display: flex;
+    }
+
+    /* kasse overlay */
+    .basketoverlay-content{
+      position: fixed;
+      right: 0;
+      /* over slides */
+      z-index: 99999;
+      display: none;
+    }
+    .basketoverlay-content.show{
+      display: flex;
+      gap: 5px;
+      background: white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+      border-radius: 10px;
+      justify-content: flex-end;
+      width: fit-content;
+      height: fit-content;
+      padding: 10px;
+      margin: 0px 20px;
+    }
+    .btext{
+      font-size: large;
+      font-weight: bold;
+    }
+
+/* slides */
+.replacesbody {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 20px;
+        }
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            /* border-radius: 15px; */
+            overflow: hidden;
+            display: grid;
+            grid-template-areas: "slide";
+        }
+        .active {
+            transition: 0.5s ease;
+        }
+        .slide {
+            grid-area: slide;
+            position: relative;
+            transition: 0.5s ease;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            /* -24 fra font-size */
+            margin: -24px 10px 0 10px;
+            padding: 15px;
+            color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            font-size: 24px;
+            text-decoration: none;
+            transition: 0.5s ease;
+            z-index: 2;
+        }
+        .next {
+            right: 0;
+        }
+        .prev:hover, .next:hover {
+            color: white;
+        }
+        .caption {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: rgba(255, 255, 255, 1);
+            background-color: rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            padding: 0px 10px;
+            font-family: system-ui;
+            font-size: 1.2em;
+        }
+
+/* grid og elementer i */
+#grid{
+  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.item{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+  border-radius: 20px;
+}
+.title{
+  font-size: x-large;
+  justify-self: center;
+  align-self: center;
+  padding: 20px;
+}
+.imgcontainer{
+  margin: 0 20px;
+}
+.realimg{
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.desc{
+  font-size: medium;
+  margin: 20px;
+  padding: 10px;
+  height:100% ;
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+.price{
+  font-size: x-large;
+  font-weight: bold;
+  align-self: flex-end;
+  padding: 0px 20px;
+}
+.buttonbox{
+  align-self: flex-end;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+}
+.buttonbox button{
+  color: white;
+  font-size: large;
+  border: none;
+  border-radius: 10px;
+  background-color: #222;
+  padding: 10px;
+  cursor: pointer;
+}
+.moneyzone{
+  /* margin-top: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* kontakt */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  gap: 10px;
+}
+
+/* skjuler knap */
+.hidden{
+  display: none;
+}
+
+/* åbningstider */
+.hours {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+#openStatus{
+  text-align: center;
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.50);
+}
